@@ -63,6 +63,14 @@ goto architecture
 set MACHINE_OS=2012r2
 goto architecture
 
+:Version10.0
+set MACHINE_OS=2016
+goto architecture
+
+rem Currently Windows Server 2016 R2 is treated as equivalent to Windows Server 2016
+:Version10.1
+goto Version10.0 
+ 
 :architecture
 
 goto Architecture%PROCESSOR_ARCHITECTURE%
